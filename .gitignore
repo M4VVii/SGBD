@@ -1,0 +1,11 @@
+# Contraseñas y configuración sensible
+.env
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores de texto
+*.tmp
+*~
+.~lock.*
