@@ -110,7 +110,7 @@ Por eso un contenedor pesa decenas o cientos de megabytes en lugar de gigabytes,
 | Eliminación limpia | Deja residuos | Completa (`docker compose down -v`) | Completa |
 | Reproducibilidad | Manual, depende del equipo | Declarativa (archivo versionable) | Manual |
 
-![Figura 1. Información del Sistema](./img/01-Informacion-del-sistema.webp)
+![Figura 1. Información del Sistema](./img/01-Informacion-del-sistema.webp)  
 **Figura 1. Información del Sistema de Linux Mint empleado.**
 
 ## 2. Método 1: Despliegue con Docker
@@ -190,7 +190,7 @@ sudo apt update
 
 El segundo `sudo apt update` es indispensable, sin él, APT desconocería el repositorio recién añadido.
 
-![Figura 2. Evidencia de la adición del repositorio de Docker](./img/02-Adicion-repositorio-docker.webp)
+![Figura 2. Evidencia de la adición del repositorio de Docker](./img/02-Adicion-repositorio-docker.webp)  
 **Figura 2. Evidencia de la adición del repositorio de Docker.**
 
 #### Paso 4: Instalar el motor de Docker y sus complementos
@@ -226,7 +226,7 @@ newgrp docker
 > ### DATO...
 > Pertenecer al grupo `docker` equivale a tener privilegios de administrador, porque un contenedor puede montar el disco del anfitrión. Es cómodo en un equipo personal de desarrollo, pero en un servidor de producción se considera un riesgo de seguridad.
 
-![Figura 3. Verificación Hello from Docker!](./img/03-Verificacion.webp)
+![Figura 3. Verificación Hello from Docker!](./img/03-Verificacion.webp)  
 **Figura 3. Verificación Hello from Docker!**
 
 ### 2.3 El archivo `Dockerfile`
@@ -465,7 +465,7 @@ Otras banderas útiles:
 | `-f otro-archivo.yml` | Usa un archivo de composición con otro nombre o ubicación. |
 | `--force-recreate` | Recrea los contenedores aunque su configuración no haya cambiado. |
 
-![Figura 4. Contenedor levantado](./img/04-Contenedor-levantado.webp)
+![Figura 4. Contenedor levantado](./img/04-Contenedor-levantado.webp)  
 **Figura 4. Contenedor levantado.**
 
 ### 2.6 Verificación del estado del contenedor
@@ -501,7 +501,7 @@ docker compose logs -f base_datos
 
 La línea que confirma el éxito es: `database system is ready to accept connections`.
 
-![Figura 5. Verificación del estado del contenedor](./img/05-Estado-contenedor.webp)
+![Figura 5. Verificación del estado del contenedor](./img/05-Estado-contenedor.webp)  
 **Figura 5. Verificación del estado del contenedor.**
 
 #### c) Entrar al contenedor y consultar desde `psql`
@@ -538,7 +538,7 @@ SELECT version();
 SELECT * FROM alumnos;
 ```
 
-![Figura 6. Entrada al contenedor y consulta](./img/06-Entrada-consulta.webp)
+![Figura 6. Entrada al contenedor y consulta](./img/06-Entrada-consulta.webp)  
 **Figura 6. Entrada al contenedor y consulta.**
 
 #### d) Comandos de administración del ciclo de vida
@@ -618,7 +618,7 @@ Lo que sucede automáticamente durante la instalación:
 > ### DATO...
 > **systemd** es el proceso de inicio de Linux Mint, es el primer programa que arranca el kernel (PID 1) y el responsable de lanzar y supervisar todos los servicios. Cada servicio se describe en un archivo llamado **unidad** (*unit*). La herramienta para hablar con él es **`systemctl`**.
 
-![Figura 7. Instalacion de PostgreSQL](./img/07-Instalacion-postgres.webp)
+![Figura 7. Instalacion de PostgreSQL](./img/07-Instalacion-postgres.webp)  
 **Figura 7. Instalacion de PostgreSQL.**
 
 ### 3.5 Paso 4: Verificar que el servicio está activo
@@ -671,7 +671,7 @@ Control manual del servicio:
 | `sudo systemctl enable postgresql` | Lo habilita para el arranque automático. |
 | `sudo systemctl disable postgresql` | Lo deshabilita. |
 
-![Figura 8. Verificación del servicio](./img/08-Verificacion-servicio.webp)
+![Figura 8. Verificación del servicio](./img/08-Verificacion-servicio.webp)  
 **Figura 8. Verificación del servicio.**
 
 ### 3.6 Paso 5: Establecer la contraseña del superusuario
@@ -798,10 +798,10 @@ Como el archivo de composición de la sección 2 ya levanta un contenedor de Adm
 
 3. Pulsar *Entrar*. Debe aparecer el listado de tablas, incluida `alumnos`.
 
-![Figura 9. Formulario de inicio de sesión](./img/09-Formulario-sesion.webp)
+![Figura 9. Formulario de inicio de sesión](./img/09-Formulario-sesion.webp)  
 **Figura 9. Formulario de inicio de sesión.**
 
-![Figura 10. Vista de la tabla alumnos](./img/10-Vista-tabla.webp)
+![Figura 10. Vista de la tabla alumnos](./img/10-Vista-tabla.webp)  
 **Figura 10. Vista de la tabla alumnos.**
 
 ### 4.3 Opción B: DBeaver Community
@@ -847,7 +847,7 @@ Nota importante: aquí **sí** se escribe `localhost`, a diferencia de Adminer. 
 
 Conviene marcar la casilla **"Guardar contraseña"** para no tener que reescribirla.
 
-![Figura 11. Configuracion de conexión](./img/11-Config-conexion.webp)
+![Figura 11. Configuracion de conexión](./img/11-Config-conexion.webp)  
 **Figura 11. Configuracion de conexión.**
 
 #### Paso 4: Probar la conexión
@@ -859,7 +859,7 @@ Pulsar el botón **"Probar conexión" (*Test Connection*)**, abajo a la izquierd
 
 Pulsar *Finalizar* para guardar la conexión.
 
-![Figura 12. Test de conexión](./img/12-Test-conexion.webp)
+![Figura 12. Test de conexión](./img/12-Test-conexion.webp)  
 **Figura 12. Test de conexión.**
 
 #### Paso 5: Ejecutar una consulta de verificación
@@ -899,10 +899,10 @@ SELECT * FROM prueba_conexion;
 
 La aparición de la fila en la cuadrícula de resultados es la **prueba definitiva** de que el servidor está instalado, activo, accesible por red y aceptando escrituras.
 
-![Figura 13. Consulta de verificación](./img/13-Consulta-verificacion.webp)
+![Figura 13. Consulta de verificación](./img/13-Consulta-verificacion.webp)  
 **Figura 13. Consulta de verificación.**
 
-![Figura 14. Conexión simultanea de ambos métodos](./img/14-Conexion-ambas.webp)
+![Figura 14. Conexión simultanea de ambos métodos](./img/14-Conexion-ambas.webp)  
 **Figura 14. Conexión simultanea de ambos métodos.**
 
 ### 4.4 Solución de problemas frecuentes
